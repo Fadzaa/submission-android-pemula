@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">SubmissionDicodingPemula</string>
+    <string name="develop_by">develop by</string>
+    <string name="name">Fattah Anggit</string>
+    <string name="greeting">Welcome</string>
+    <string name="user_name">Fattah Anggit Al Dzakwan</string>
+    <string name="home_desc">Millions of movies, TV shows and people to discover. Explore now.</string>
+    <string name="search">Search</string>
+    <string name="category">Category</string>
+    <string name="in_theatre">In Theatre</string>
+    <string name="trending_movies">Trending Movies</string>
+    <string name="top_rated_movies">Top Rated Movies</string>
+    <string name="series">Series</string>
+    <string name="series_desc">Collections of TV Series</string>
+    <string name="on_air_series">On Air Series</string>
+    <string name="trending_series">Trending Series</string>
+    <string name="top_rated_series">Top Rated Series</string>
+    <string name="upcoming_release">Upcoming Release</string>
+    <string name="upcoming_desc">List of Movies that Coming Soon</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_series">Series</string>
+    <string name="menu_upcoming">Upcoming</string>
+    <string name="menu_about">About</string>
 </resources>
