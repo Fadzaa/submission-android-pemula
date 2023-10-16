@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="menu_text_style">
+        <item name="android:fontFamily">@font/montserrat_light</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/ternary_color</item>
+    </style>
+
+    <style name="menu_text_style_active">
+        <item name="android:fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/primary_color</item>
+    </style>
+
+    <style name="heading_text_style">
+        <item name="android:fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/primary_text</item>
+    </style>
+
+    <style name="subheading_text_style">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/primary_text_darker</item>
+    </style>
+
+    <style name="heading_body_text_style">
+        <item name="android:fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/primary_text</item>
+    </style>
+
+
+
+</resources>
