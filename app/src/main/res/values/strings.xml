@@ -21,4 +21,7 @@
     <string name="menu_series">Series</string>
     <string name="menu_upcoming">Upcoming</string>
     <string name="menu_about">About</string>
+
+    <!-- Content Description -->
+    <string name="logo_app">Logo App</string>
 </resources>
