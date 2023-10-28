@@ -2,7 +2,7 @@
     <string name="app_name">SubmissionDicodingPemula</string>
     <string name="develop_by">develop by</string>
     <string name="name">Fattah Anggit</string>
-    <string name="greeting">Welcome</string>
+    <string name="greeting">Welcome,</string>
     <string name="user_name">Fattah Anggit Al Dzakwan</string>
     <string name="home_desc">Millions of movies, TV shows and people to discover. Explore now.</string>
     <string name="search">Search</string>
@@ -24,4 +24,6 @@
 
     <!-- Content Description -->
     <string name="logo_app">Logo App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
