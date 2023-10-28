@@ -5,6 +5,8 @@
     <color name="ternary_color">#FF23272D</color>
 
     <color name="primary_text">#FFE3E3E3</color>
+    <color name="secondary_text">#FF959595</color>
+
     <color name="primary_text_darker">#FFAEABAB</color>
 
     <color name="darker_text">#FF767676</color>
