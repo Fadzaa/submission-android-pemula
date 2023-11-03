@@ -3,5 +3,9 @@
     <style name="Base.Theme.SubmissionDicodingPemula" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorPrimaryDark">@color/ternary_color</item>
+        <item name="android:windowBackground">@color/secondary_color</item>
+        <item name="android:textColor">@color/primary_text</item>
     </style>
 </resources>
