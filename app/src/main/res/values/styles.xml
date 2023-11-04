@@ -34,6 +34,14 @@
         <item name="android:textColor">@color/primary_text</item>
     </style>
 
-
+    <style name="BottomNavTheme" parent="Widget.Design.BottomNavigationView">
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="itemBackground">@color/ternary_color</item>
+        <item name="itemIconTint">@color/bottom_nav_color_selector</item>
+        <item name="itemTextColor">@color/bottom_nav_color_selector</item>
+        <item name="itemActiveIndicatorStyle">@color/primary_color</item>
+        <item name="itemTextAppearanceActive">@style/MenuTextStyle.Active</item>
+        <item name="itemTextAppearanceInactive">@style/MenuTextStyle</item>
+    </style>
 
 </resources>
