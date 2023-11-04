@@ -1,34 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="MenuTextStyle" parent="TextAppearance.AppCompat.Menu">
+    <style name="MenuTextStyle">
         <item name="android:fontFamily">@font/montserrat_light</item>
         <item name="android:textSize">11sp</item>
         <item name="android:textColor">@color/ternary_color</item>
     </style>
 
-    <style name="MenuTextStyle.Active" parent="TextAppearance.AppCompat.Menu">
+    <style name="MenuTextStyle.Active">
         <item name="android:fontFamily">@font/montserrat_semibold</item>
         <item name="android:textColor">@color/primary_color</item>
     </style>
 
-    <style name="HeadingText" parent="TextAppearance.AppCompat.Headline">
+    <style name="HeadingText">
         <item name="android:fontFamily">@font/montserrat_semibold</item>
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/primary_color</item>
     </style>
 
-    <style name="SubHeadingText" parent="TextAppearance.AppCompat.Subhead">
+    <style name="SubHeadingText">
         <item name="android:fontFamily">@font/montserrat_regular</item>
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">@color/secondary_text</item>
     </style>
 
-    <style name="BodyText" parent="TextAppearance.AppCompat.Body1">
+    <style name="SubHeadingText.SemiBold">
+        <item name="android:fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textColor">@color/primary_text</item>
+    </style>
+
+    <style name="BodyText" >
         <item name="android:fontFamily">@font/montserrat_semibold</item>
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/primary_text</item>
     </style>
 
-
+    <style name="BottomNavTheme" parent="Widget.Design.BottomNavigationView">
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="itemBackground">@color/ternary_color</item>
+        <item name="itemIconTint">@color/bottom_nav_color_selector</item>
+        <item name="itemTextColor">@color/bottom_nav_color_selector</item>
+        <item name="itemActiveIndicatorStyle">@color/primary_color</item>
+        <item name="itemTextAppearanceActive">@style/MenuTextStyle.Active</item>
+        <item name="itemTextAppearanceInactive">@style/MenuTextStyle</item>
+    </style>
 
 </resources>
