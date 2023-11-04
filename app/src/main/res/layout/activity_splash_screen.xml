@@ -19,12 +19,13 @@
         android:contentDescription="@string/logo_app" />
 
     <TextView
+        android:id="@+id/tv_develop_by"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/develop_by"
         android:fontFamily="@font/montserrat_regular"
         android:textSize="12sp"
-        android:textColor="@color/darker_text"
+        android:textColor="@color/secondary_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="15dp"
