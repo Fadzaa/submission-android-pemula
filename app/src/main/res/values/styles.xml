@@ -14,12 +14,18 @@
     <style name="HeadingText">
         <item name="android:fontFamily">@font/montserrat_semibold</item>
         <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/primary_text</item>
+    </style>
+
+    <style name="HeadingText.Primary">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/primary_color</item>
     </style>
 
     <style name="SubHeadingText">
         <item name="android:fontFamily">@font/montserrat_regular</item>
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">11sp</item>
         <item name="android:textColor">@color/secondary_text</item>
     </style>
 
@@ -28,7 +34,12 @@
         <item name="android:textColor">@color/primary_text</item>
     </style>
 
-    <style name="BodyText" >
+    <style name="SubHeadingText.Light">
+        <item name="android:fontFamily">@font/montserrat_light</item>
+        <item name="android:textColor">@color/primary_text</item>
+    </style>
+
+    <style name="SectionText" >
         <item name="android:fontFamily">@font/montserrat_semibold</item>
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/primary_text</item>
