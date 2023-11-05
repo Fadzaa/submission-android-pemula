@@ -26,9 +26,9 @@ class BottomNavigation : AppCompatActivity(), OnItemSelectedListener{
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.menu_item_home -> replaceFragment(HomeFragment())
-            R.id.menu_item_film -> replaceFragment(HomeFragment())
-            R.id.menu_item_watchlist -> replaceFragment(HomeFragment())
-            R.id.menu_item_profile -> replaceFragment(HomeFragment())
+            R.id.menu_item_series -> replaceFragment(SeriesFragment())
+            R.id.menu_item_upcoming -> replaceFragment(UpcomingFragment())
+            R.id.menu_item_about -> replaceFragment(AboutFragment())
         }
         return true
     }
