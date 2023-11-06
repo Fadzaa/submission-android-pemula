@@ -22,6 +22,21 @@
         <item name="android:textColor">@color/primary_color</item>
     </style>
 
+    <style name="HeadingText.VoteGreen">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textColor">@color/primary_color</item>
+    </style>
+
+    <style name="HeadingText.VoteYellow">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textColor">@color/primary_color</item>
+    </style>
+
+    <style name="HeadingText.VoteRed">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textColor">@color/primary_color</item>
+    </style>
+
     <style name="SubHeadingText">
         <item name="android:fontFamily">@font/montserrat_regular</item>
         <item name="android:textSize">12sp</item>

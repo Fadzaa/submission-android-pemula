@@ -36,6 +36,8 @@
     <string name="movie_release_date">Release Date:</string>
     <string name="movie_date">2023 January 01</string>
     <string name="movie_overview">Overview</string>
+    <string name="detail_movie_vote_average">7.5</string>
+    <string name="detail_movie_vote_count">(1000)</string>
     <string name="api_key">2d51650e8cf7b5a2d13b814001a0dd30</string>
 
     <!-- Content Description -->
