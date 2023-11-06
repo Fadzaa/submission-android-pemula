@@ -1,4 +1,4 @@
-package com.example.submissiondicodingpemula
+package com.example.submissiondicodingpemula.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

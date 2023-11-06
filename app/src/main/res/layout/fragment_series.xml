@@ -7,7 +7,7 @@
     android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
     android:layout_marginTop="@dimen/activity_vertical_margin"
     android:fillViewport="true"
-    tools:context=".SeriesFragment">
+    tools:context=".fragment.SeriesFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

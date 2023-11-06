@@ -1,10 +1,15 @@
-package com.example.submissiondicodingpemula
+package com.example.submissiondicodingpemula.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.fragment.app.Fragment
+import com.example.submissiondicodingpemula.R
 import com.example.submissiondicodingpemula.databinding.ActivityBottomNavigationBinding
+import com.example.submissiondicodingpemula.fragment.AboutFragment
+import com.example.submissiondicodingpemula.fragment.HomeFragment
+import com.example.submissiondicodingpemula.fragment.SeriesFragment
+import com.example.submissiondicodingpemula.fragment.UpcomingFragment
 import com.google.android.material.navigation.NavigationBarView.OnItemSelectedListener
 
 

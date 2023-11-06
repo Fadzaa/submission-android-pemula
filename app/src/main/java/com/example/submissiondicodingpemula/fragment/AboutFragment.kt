@@ -1,12 +1,13 @@
-package com.example.submissiondicodingpemula
+package com.example.submissiondicodingpemula.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-class HomeFragment : Fragment() {
+import androidx.fragment.app.Fragment
+import com.example.submissiondicodingpemula.R
 
+class AboutFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,7 +19,6 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        return inflater.inflate(R.layout.fragment_about, container, false)
     }
-
 }

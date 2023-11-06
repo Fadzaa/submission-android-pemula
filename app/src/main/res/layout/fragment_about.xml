@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
     android:layout_marginTop="@dimen/activity_vertical_margin"
-    tools:context=".AboutFragment">
+    tools:context=".fragment.AboutFragment">
 
     <TextView
         android:id="@+id/tv_profile"

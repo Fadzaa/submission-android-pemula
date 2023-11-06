@@ -30,6 +30,13 @@
     <string name="contact_email">fadza20@gmail.com</string>
     <string name="contact_github">Fadzaa</string>
     <string name="contact_linkedin">Fattah Anggit Al Dzakwan</string>
+    <string name="movie_title">Movie Title</string>
+    <string name="movie_genre">Genre1, Genre2, Genre3</string>
+    <string name="movie_duration">0h 00m</string>
+    <string name="movie_release_date">Release Date:</string>
+    <string name="movie_date">2023 January 01</string>
+    <string name="movie_overview">Overview</string>
+
     <!-- Content Description -->
     <string name="logo_app">Logo App</string>
     <!-- TODO: Remove or change this placeholder text -->

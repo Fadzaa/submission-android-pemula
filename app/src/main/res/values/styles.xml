@@ -33,6 +33,11 @@
         <item name="android:textColor">@color/primary_text</item>
     </style>
 
+    <style name="SubHeadingText.Medium">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textColor">@color/primary_text</item>
+    </style>
+
     <style name="SubHeadingText.Light">
         <item name="android:fontFamily">@font/montserrat_light</item>
         <item name="android:textColor">@color/primary_text</item>
