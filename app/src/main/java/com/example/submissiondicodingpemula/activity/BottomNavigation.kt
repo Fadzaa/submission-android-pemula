@@ -3,6 +3,7 @@ package com.example.submissiondicodingpemula.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.fragment.app.Fragment
 import com.example.submissiondicodingpemula.R
 import com.example.submissiondicodingpemula.databinding.ActivityBottomNavigationBinding
@@ -18,6 +19,7 @@ class BottomNavigation : AppCompatActivity(), OnItemSelectedListener{
     private lateinit var binding: ActivityBottomNavigationBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        installSplashScreen()
         binding = ActivityBottomNavigationBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
