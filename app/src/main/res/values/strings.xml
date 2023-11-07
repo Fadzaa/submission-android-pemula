@@ -38,6 +38,11 @@
     <string name="movie_overview">Overview</string>
     <string name="detail_movie_vote_average">7.5</string>
     <string name="detail_movie_vote_count">(1000)</string>
+    <string name="summary">Summary</string>
+    <string name="detail_movie_overview">Detail Overview</string>
+    <string name="cast">Cast</string>
+    <string name="recommendation_movie">Recommendation Movie</string>
+
     <string name="api_key">2d51650e8cf7b5a2d13b814001a0dd30</string>
 
     <!-- Content Description -->

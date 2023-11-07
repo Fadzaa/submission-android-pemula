@@ -24,17 +24,17 @@
 
     <style name="HeadingText.VoteGreen">
         <item name="android:fontFamily">@font/montserrat_medium</item>
-        <item name="android:textColor">@color/primary_color</item>
+        <item name="android:textColor">@color/green</item>
     </style>
 
     <style name="HeadingText.VoteYellow">
         <item name="android:fontFamily">@font/montserrat_medium</item>
-        <item name="android:textColor">@color/primary_color</item>
+        <item name="android:textColor">@color/yellow</item>
     </style>
 
     <style name="HeadingText.VoteRed">
         <item name="android:fontFamily">@font/montserrat_medium</item>
-        <item name="android:textColor">@color/primary_color</item>
+        <item name="android:textColor">@color/red</item>
     </style>
 
     <style name="SubHeadingText">
