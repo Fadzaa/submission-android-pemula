@@ -9,8 +9,6 @@ import com.example.submissiondicodingpemula.R
 import com.example.submissiondicodingpemula.databinding.ActivityBottomNavigationBinding
 import com.example.submissiondicodingpemula.fragment.AboutFragment
 import com.example.submissiondicodingpemula.fragment.HomeFragment
-import com.example.submissiondicodingpemula.fragment.SeriesFragment
-import com.example.submissiondicodingpemula.fragment.UpcomingFragment
 import com.google.android.material.navigation.NavigationBarView.OnItemSelectedListener
 
 
@@ -33,8 +31,6 @@ class BottomNavigation : AppCompatActivity(), OnItemSelectedListener{
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.menu_item_home -> replaceFragment(HomeFragment())
-            R.id.menu_item_series -> replaceFragment(SeriesFragment())
-            R.id.menu_item_upcoming -> replaceFragment(UpcomingFragment())
             R.id.menu_item_about -> replaceFragment(AboutFragment())
         }
         return true

@@ -83,17 +83,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tv_genre_movie"
                 />
 
-            <TextView
-                android:id="@+id/tv_date_movie"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/movie_date"
-                style="@style/SubHeadingText.Medium"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="5dp"
-                app:layout_constraintStart_toEndOf="@+id/tv_release_date_movie"
-                app:layout_constraintTop_toBottomOf="@id/tv_genre_movie"
-                />
+
 
             <TextView
                 android:id="@+id/tv_overview_movie"
