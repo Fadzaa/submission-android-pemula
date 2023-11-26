@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.submissiondicodingpemula.databinding.ItemVerticalBinding
+import com.example.submissiondicodingpemula.model.Genre
 import com.example.submissiondicodingpemula.model.MovieResult
 
 import java.text.ParseException
@@ -13,9 +14,9 @@ import java.text.SimpleDateFormat
 import java.util.Locale
 
 
-class ListMovieAdapter( private val movies: List<MovieResult>): RecyclerView.Adapter<ListMovieAdapter.ListViewHolder>() {
+class ListMovieAdapter( private val movies: List<MovieResult>, private val listOfGenres: List<Genre>): RecyclerView.Adapter<ListMovieAdapter.ListViewHolder>() {
     class ListViewHolder(private val binding: ItemVerticalBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(movieList: MovieResult) {
+        fun bind(movieList: MovieResult, genreIds: List<Int>, listOfGenres: List<Genre> = listOf()) {
             val baseURL = "https://image.tmdb.org/t/p/"
 
             val imagePath = movieList.poster_path
@@ -33,6 +34,8 @@ class ListMovieAdapter( private val movies: List<MovieResult>): RecyclerView.Ada
                 originalText
             }
 
+            val genreNames = mapGenreIdsToNames(genreIds , listOfGenres)
+
             with(binding) {
                 Glide.with(root.context)
                     .load(baseURL + "w500" + imagePath)
@@ -41,9 +44,9 @@ class ListMovieAdapter( private val movies: List<MovieResult>): RecyclerView.Ada
 
                 tvTitleMovie.text = movieList.title
 
-                tvGenreMovie.text = movieList.genre_ids.toString()
+                tvGenreMovie.text = genreNames.joinToString(", ")
 
-//                tvDurationMovie.text = movieList.duration
+
                 try {
                     val date = inputFormat.parse(releaseDate)
                     val outputDate = outputFormat.format(date!!)
@@ -64,6 +67,12 @@ class ListMovieAdapter( private val movies: List<MovieResult>): RecyclerView.Ada
                 tvOverviewMovie.text = truncatedText
             }
         }
+
+        private fun mapGenreIdsToNames(genreIds: List<Int>, genres: List<Genre>): List<String> {
+            return genreIds.mapNotNull { genreId ->
+                genres.find { it.id == genreId }?.name
+            }
+        }
     }
 
     override fun onCreateViewHolder(
@@ -76,7 +85,8 @@ class ListMovieAdapter( private val movies: List<MovieResult>): RecyclerView.Ada
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val movies:MovieResult = movies[position]
-        holder.bind(movies)
+
+        holder.bind(movies, movies.genre_ids, listOfGenres)
 
     }
 
