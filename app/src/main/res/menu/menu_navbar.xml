@@ -6,17 +6,6 @@
         android:title="@string/menu_home" />
 
     <item
-
-        android:id="@+id/menu_item_series"
-        android:icon="@drawable/ic_series"
-        android:title="@string/menu_series"/>
-
-    <item
-        android:id="@+id/menu_item_upcoming"
-        android:icon="@drawable/ic_upcoming"
-        android:title="@string/menu_upcoming"/>
-
-    <item
         android:id="@+id/menu_item_about"
         android:icon="@drawable/ic_about"
         android:title="@string/menu_about"/>
