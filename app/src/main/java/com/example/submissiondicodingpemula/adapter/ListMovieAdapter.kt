@@ -1,20 +1,26 @@
 package com.example.submissiondicodingpemula.adapter
 
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.submissiondicodingpemula.activity.DetailMovieActivity
 import com.example.submissiondicodingpemula.databinding.ItemVerticalBinding
 import com.example.submissiondicodingpemula.model.Genre
 import com.example.submissiondicodingpemula.model.MovieResult
 
 import java.text.ParseException
 import java.text.SimpleDateFormat
+import java.util.EventListener
 import java.util.Locale
 
 
 class ListMovieAdapter( private val movies: List<MovieResult>, private val listOfGenres: List<Genre>): RecyclerView.Adapter<ListMovieAdapter.ListViewHolder>() {
+    private lateinit var onItemClickCallback: OnItemClickCallback
+
     class ListViewHolder(private val binding: ItemVerticalBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(movieList: MovieResult, genreIds: List<Int>, listOfGenres: List<Genre> = listOf()) {
             val baseURL = "https://image.tmdb.org/t/p/"
@@ -88,6 +94,16 @@ class ListMovieAdapter( private val movies: List<MovieResult>, private val listO
 
         holder.bind(movies, movies.genre_ids, listOfGenres)
 
+        holder.itemView.setOnClickListener { onItemClickCallback.onItemClicked() }
+
+    }
+
+    interface OnItemClickCallback {
+        fun onItemClicked()
+    }
+
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
     }
 
     override fun getItemCount(): Int {
