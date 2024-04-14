@@ -17,7 +17,9 @@ class BottomNavigation : AppCompatActivity(), OnItemSelectedListener{
     private lateinit var binding: ActivityBottomNavigationBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         installSplashScreen()
+
         binding = ActivityBottomNavigationBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)

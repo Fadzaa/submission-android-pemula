@@ -85,6 +85,8 @@
         <item name="itemActiveIndicatorStyle">@color/primary_color</item>
         <item name="itemTextAppearanceActive">@style/MenuTextStyle.Active</item>
         <item name="itemTextAppearanceInactive">@style/MenuTextStyle</item>
+        <item name="android:background">@color/ternary_color</item>
+
     </style>
 
 </resources>
