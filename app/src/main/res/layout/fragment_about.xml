@@ -1,166 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
     android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:fillViewport="true"
     tools:context=".fragment.AboutFragment">
 
-    <TextView
-        android:id="@+id/tv_profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/profile"
-        style="@style/HeadingText"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/tv_profile_desc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/profile_desc"
-        style="@style/SubHeadingText"
-        app:layout_constraintTop_toBottomOf="@+id/tv_profile"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        <TextView
+            android:id="@+id/tv_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile"
+            style="@style/HeadingText"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/civ_profile_picture"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:src="@drawable/profile_picture"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        app:layout_constraintTop_toBottomOf="@id/tv_profile_desc"
-        app:layout_constraintStart_toStartOf="parent">
+        <TextView
+            android:id="@+id/tv_profile_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_desc"
+            style="@style/SubHeadingText"
+            app:layout_constraintTop_toBottomOf="@+id/tv_profile"
+            app:layout_constraintStart_toStartOf="parent"
+            />
 
-    </de.hdodenhof.circleimageview.CircleImageView>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_profile_picture"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/profile_picture"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            app:layout_constraintTop_toBottomOf="@id/tv_profile_desc"
+            app:layout_constraintStart_toStartOf="parent">
 
-    <TextView
-        android:id="@+id/tv_user_name_profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/user_name"
-        style="@style/HeadingText"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/civ_profile_picture"
-        />
+        </de.hdodenhof.circleimageview.CircleImageView>
 
-    <TextView
-        android:id="@+id/tv_user_job_profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/profile_job"
-        style="@style/SectionText.Light"
-        app:layout_constraintTop_toBottomOf="@id/tv_user_name_profile"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        <TextView
+            android:id="@+id/tv_user_name_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_name"
+            style="@style/HeadingText"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/civ_profile_picture"
+            />
 
-    <TextView
-        android:id="@+id/tv_about_me"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/about_me"
-        style="@style/SectionText"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        app:layout_constraintTop_toBottomOf="@+id/tv_user_job_profile"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        <TextView
+            android:id="@+id/tv_user_job_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_job"
+            style="@style/SectionText.Light"
+            app:layout_constraintTop_toBottomOf="@id/tv_user_name_profile"
+            app:layout_constraintStart_toStartOf="parent"
+            />
 
-    <TextView
-        android:id="@+id/tv_about_me_desc"
-        android:layout_width="340dp"
-        android:layout_height="wrap_content"
-        android:text="@string/about_me_desc"
-        style="@style/BodyText"
-        android:layout_marginTop="@dimen/margin_after_heading"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_about_me" />
+        <TextView
+            android:id="@+id/tv_about_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_me"
+            style="@style/SectionText"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            app:layout_constraintTop_toBottomOf="@+id/tv_user_job_profile"
+            app:layout_constraintStart_toStartOf="parent"
+            />
 
-    <TextView
-        android:id="@+id/tv_contact_person"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/contact_person"
-        style="@style/SectionText"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        app:layout_constraintTop_toBottomOf="@+id/tv_about_me_desc"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        <TextView
+            android:id="@+id/tv_about_me_desc"
+            style="@style/BodyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_after_heading"
+            android:text="@string/about_me_desc"
+            android:layout_marginStart="0dp"
 
-    <ImageView
-        android:id="@+id/iv_mail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_mail"
-        android:layout_marginTop="@dimen/margin_after_heading"
-        app:layout_constraintTop_toBottomOf="@id/tv_contact_person"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_about_me" />
 
-    <TextView
-        android:id="@+id/tv_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/contact_email"
-        style="@style/SectionText.Light"
-        android:layout_marginTop="12dp"
-        android:layout_marginStart="@dimen/margin_after_icon_horizontal"
-        app:layout_constraintTop_toBottomOf="@id/tv_contact_person"
-        app:layout_constraintStart_toEndOf="@+id/iv_mail"
-        />
+        <TextView
+            android:id="@+id/tv_contact_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_person"
+            style="@style/SectionText"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            app:layout_constraintTop_toBottomOf="@+id/tv_about_me_desc"
+            app:layout_constraintStart_toStartOf="parent"
+            />
 
-    <ImageView
-        android:id="@+id/iv_github"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_github"
-        android:layout_marginTop="@dimen/margin_after_heading"
-        app:layout_constraintTop_toBottomOf="@id/iv_mail"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        <ImageView
+            android:id="@+id/iv_mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_mail"
+            android:layout_marginTop="@dimen/margin_after_heading"
+            app:layout_constraintTop_toBottomOf="@id/tv_contact_person"
+            app:layout_constraintStart_toStartOf="parent"
+            />
 
-    <TextView
-        android:id="@+id/tv_github"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/contact_github"
-        style="@style/SectionText.Light"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_marginStart="@dimen/margin_after_icon_horizontal"
-        app:layout_constraintTop_toBottomOf="@id/tv_email"
-        app:layout_constraintStart_toEndOf="@+id/iv_github"
-        />
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_email"
+            style="@style/SectionText.Light"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="@dimen/margin_after_icon_horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tv_contact_person"
+            app:layout_constraintStart_toEndOf="@+id/iv_mail"
+            />
 
-    <ImageView
-        android:id="@+id/iv_linkedin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_linkedin"
-        android:layout_marginTop="@dimen/margin_after_heading"
-        app:layout_constraintTop_toBottomOf="@id/iv_github"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        <ImageView
+            android:id="@+id/iv_github"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_github"
+            android:layout_marginTop="@dimen/margin_after_heading"
+            app:layout_constraintTop_toBottomOf="@id/iv_mail"
+            app:layout_constraintStart_toStartOf="parent"
+            />
 
-    <TextView
-        android:id="@+id/tv_linkedin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/contact_linkedin"
-        style="@style/SectionText.Light"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_marginStart="@dimen/margin_after_icon_horizontal"
-        app:layout_constraintTop_toBottomOf="@id/tv_github"
-        app:layout_constraintStart_toEndOf="@+id/iv_linkedin"
-        />
+        <TextView
+            android:id="@+id/tv_github"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_github"
+            style="@style/SectionText.Light"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginStart="@dimen/margin_after_icon_horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tv_email"
+            app:layout_constraintStart_toEndOf="@+id/iv_github"
+            />
+
+        <ImageView
+            android:id="@+id/iv_linkedin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_linkedin"
+            android:layout_marginTop="@dimen/margin_after_heading"
+            app:layout_constraintTop_toBottomOf="@id/iv_github"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tv_linkedin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_linkedin"
+            style="@style/SectionText.Light"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginStart="@dimen/margin_after_icon_horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tv_github"
+            app:layout_constraintStart_toEndOf="@+id/iv_linkedin"
+            />
 
 
 
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

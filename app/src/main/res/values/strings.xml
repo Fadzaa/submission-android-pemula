@@ -1,25 +1,9 @@
 <resources>
     <string name="app_name">SubmissionDicodingPemula</string>
-    <string name="develop_by">develop by</string>
-    <string name="name">Fattah Anggit</string>
-    <string name="greeting">Welcome,</string>
     <string name="user_name">Fattah Anggit Al Dzakwan</string>
-    <string name="home_desc">Millions of movies, TV shows and people to discover. Explore now.</string>
-    <string name="search">Search</string>
-    <string name="category">Category</string>
-    <string name="in_theatre">In Theatre</string>
-    <string name="trending_movies">Trending Movies</string>
-    <string name="top_rated_movies">Top Rated Movies</string>
-    <string name="series">Series</string>
-    <string name="series_desc">Collections of TV Series</string>
-    <string name="on_air_series">On Air Series</string>
-    <string name="trending_series">Trending Series</string>
-    <string name="top_rated_series">Top Rated Series</string>
     <string name="upcoming_release">Upcoming Release</string>
     <string name="upcoming_desc">List of Movies that Coming Soon</string>
     <string name="menu_home">Home</string>
-    <string name="menu_series">Series</string>
-    <string name="menu_upcoming">Upcoming</string>
     <string name="menu_about">About</string>
     <string name="profile">Profile</string>
     <string name="profile_desc">Brief explanation about me</string>
@@ -33,22 +17,16 @@
     <string name="movie_title">Movie Title</string>
     <string name="movie_genre">Genre1, Genre2, Genre3</string>
     <string name="movie_duration">0h 00m</string>
-    <string name="movie_release_date">Release Date: %1$</string>
-
-    <string name="movie_date">2023 January 01</string>
+    <string name="movie_release_date">Release Date: %1$s</string>
     <string name="movie_overview">Overview</string>
     <string name="detail_movie_vote_average">7.5</string>
     <string name="detail_movie_vote_count">(1000)</string>
     <string name="summary">Summary</string>
     <string name="detail_movie_overview">Detail Overview</string>
     <string name="cast">Cast</string>
-    <string name="recommendation_movie">Recommendation Movie</string>
+    <string name="separator">|</string>
 
     <string name="api_key">2d51650e8cf7b5a2d13b814001a0dd30</string>
 
-    <!-- Content Description -->
-    <string name="logo_app">Logo App</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="release_date">Release Date: %1$s</string>
+
 </resources>

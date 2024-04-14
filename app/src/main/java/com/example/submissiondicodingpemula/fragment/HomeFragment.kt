@@ -15,6 +15,7 @@ import com.example.submissiondicodingpemula.databinding.FragmentHomeBinding
 import com.example.submissiondicodingpemula.service.GenreInterface
 import com.example.submissiondicodingpemula.service.RetrofitInstance
 import com.example.submissiondicodingpemula.service.UpcomingInterface
+import retrofit2.Response
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -28,8 +29,11 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        binding.rvUpcoming.setHasFixedSize(true)
-        binding.rvUpcoming.layoutManager = LinearLayoutManager(requireContext())
+        return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         val upcomingService = RetrofitInstance.instance.create(UpcomingInterface::class.java)
         val genresService = RetrofitInstance.instance.create(GenreInterface::class.java)
@@ -38,42 +42,37 @@ class HomeFragment : Fragment() {
         lifecycleScope.launchWhenCreated {
             binding.progressBarUpcoming.isVisible = true
 
-            val upcomingResponse = try {
-                upcomingService.getUpcoming(getString(R.string.api_key))
-            } catch (e: Exception) {
-                binding.progressBarUpcoming.isVisible = false
-                Toast.makeText(requireContext(), e.toString(), Toast.LENGTH_SHORT).show()
-                return@launchWhenCreated
-            }
+            val upcomingResponse = callService { upcomingService.getUpcoming(getString(R.string.api_key)) }
+            val genresResponse = callService { genresService.getGenres(getString(R.string.api_key)) }
 
-            val genresResponse = try {
-                genresService.getGenres(getString(R.string.api_key))
-            } catch (e: Exception) {
-                binding.progressBarUpcoming.isVisible = false
-                Toast.makeText(requireContext(), e.toString(), Toast.LENGTH_SHORT).show()
-                return@launchWhenCreated
-            }
+            if (upcomingResponse?.isSuccessful == true && genresResponse?.isSuccessful == true) {
+                val upcomingList = upcomingResponse.body()!!.results
+                val listOfGenre = genresResponse.body()!!.genres
+                val listMovieAdapter = ListMovieAdapter(upcomingList, listOfGenre)
 
-
-            if (upcomingResponse.isSuccessful && upcomingResponse.body() != null && genresResponse.isSuccessful && genresResponse.body() != null) {
-                val upcomingList = upcomingResponse.body()!!
-                val listOfGenre = genresResponse.body()!!
-                binding.progressBarUpcoming.isVisible = false
-                binding.rvUpcoming.adapter = ListMovieAdapter(upcomingList.results, listOfGenre.genres)
+                with(binding) {
+                    progressBarUpcoming.isVisible = false
+                    rvUpcoming.adapter = listMovieAdapter
+                    rvUpcoming.setHasFixedSize(true)
+                    rvUpcoming.layoutManager = LinearLayoutManager(requireContext())
+                }
             } else {
                 binding.progressBarUpcoming.isVisible = false
             }
-
-
         }
-
-        return view
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    private suspend inline fun <reified T> callService(serviceCall: suspend () -> Response<T>): Response<T>? {
+        return try {
+            serviceCall.invoke()
+        } catch (e: Exception) {
+            binding.progressBarUpcoming.isVisible = false
+            Toast.makeText(requireContext(), e.toString(), Toast.LENGTH_SHORT).show()
+            null
+        }
     }
+
+
 
 
 
